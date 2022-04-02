@@ -1,9 +1,7 @@
 package com.leon.portfolio.resources;
 
 import com.leon.portfolio.entities.Order;
-import com.leon.portfolio.entities.User;
 import com.leon.portfolio.services.OrderService;
-import com.leon.portfolio.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
