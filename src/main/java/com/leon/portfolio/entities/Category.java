@@ -1,12 +1,12 @@
 package com.leon.portfolio.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.common.collect.Lists;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @Entity
@@ -20,5 +20,8 @@ public class Category implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
+    @Setter(AccessLevel.NONE)
+    @ManyToMany(mappedBy = "categories")
+    @JsonIgnore
+    private List<Product> products = Lists.newArrayList();
 }
