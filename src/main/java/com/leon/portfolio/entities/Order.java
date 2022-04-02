@@ -5,6 +5,7 @@ import com.leon.portfolio.types.OrderStatus;
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -16,6 +17,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@EqualsAndHashCode
 public class Order implements Serializable {
 
     @Id
